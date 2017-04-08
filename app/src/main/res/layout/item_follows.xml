@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="8dp"
+    android:paddingBottom="8dp" >
+
+    <com.daimajia.swipe.SwipeLayout xmlns:swipe="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/swipe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        swipe:leftEdgeSwipeOffset="0dp"
+        swipe:rightEdgeSwipeOffset="0dp">
+
+        <LinearLayout
+            android:id="@+id/layout_follows_unfollow"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:tag="BottomText"
+            android:weightSum="10"
+            android:gravity="center"
+            android:clickable="true">
+
+            <ImageView
+                android:id="@+id/iv_follows_action"
+                android:src="@drawable/abc_btn_rating_star_off_mtrl_alpha"
+                android:layout_width="80dp"
+                android:background="@android:color/holo_orange_dark"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="15dp">
+
+            <com.bukeu.moment.view.widget.CircularImageView
+                android:id="@+id/iv_follows_avater"
+                android:layout_width="@dimen/card_avater"
+                android:layout_height="@dimen/card_avater"
+                android:src="@drawable/default_avater"
+                android:padding="5dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="5dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_follows_avater"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:layout_marginLeft="10dp">
+
+                <TextView
+                    android:id="@+id/tv_follows_nickname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="xBinary"
+                    android:textSize="@dimen/card_font_head"
+                    android:textColor="@color/primary_material_dark"
+                    android:layout_marginTop="10dp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </com.daimajia.swipe.SwipeLayout>
+
+</LinearLayout>

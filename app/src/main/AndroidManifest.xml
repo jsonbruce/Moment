@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.bukeu.moment" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_CONFIGURATION" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="true" />
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <application
+        android:name=".MomentApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:process="com.bukeu.moment"
+        android:theme="@style/AppTheme.base" >
+        <meta-data
+            android:name="com.amap.api.v2.apikey"
+            android:value="89376c3a8afef07276a5195ee1d5de63" />
+
+        <activity
+            android:name=".view.activity.WelcomeActivity"
+            android:theme="@style/AppTheme.TransparentActivity.FullScreen" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".view.activity.MainActivity"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.bukeu.moment.view.activity.MainActivity"
+            android:theme="@style/AppTheme.base" />
+        <activity
+            android:name=".view.activity.MainActivity2"
+            android:launchMode="singleTask"
+            android:taskAffinity="com.bukeu.moment.view.activity.MainActivity2" />
+        <activity android:name=".view.activity.UserProfileActivity" />
+        <activity android:name=".view.activity.TakePhotoActivity" />
+        <activity android:name=".view.activity.PublishActivity" />
+        <activity
+            android:name=".view.activity.CameraActivity"
+            android:theme="@style/AppTheme.TransparentActivity.FullScreen" />
+        <activity android:name=".view.activity.SigninActivity" />
+        <activity
+            android:name=".view.activity.SettingsActivity"
+            android:label="@string/title_activity_settings" />
+        <activity
+            android:name=".view.activity.UpdateProfileActivity"
+            android:label="@string/title_activity_update_profile" />
+        <activity
+            android:name=".view.activity.SearchActivity"
+            android:label="@string/title_activity_search" />
+        <activity
+            android:name=".view.activity.FollowsActivity"
+            android:label="@string/title_activity_followers" />
+
+        <service
+            android:name=".view.service.CoreService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":core" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".view.service.PushService"
+            android:enabled="true"
+            android:exported="true"
+            android:process=":push" >
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".view.service.NotificationService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".view.service.MomentService"
+            android:enabled="true"
+            android:exported="true" >
+        </service>
+        <service
+            android:name=".view.service.PublishIntentService"
+            android:enabled="true"
+            android:exported="true" />
+        <service
+            android:name=".view.service.UpdateIntentService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver
+            android:name=".view.service.MomentBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="com.bukeu.moment.action.START_MOMENT_SERVICE" />
+                <action android:name="com.bukeu.moment.action.START_MOMENT_LIKES" />
+                <action android:name="com.bukeu.moment.action.MOMENT_SYNCMOMENTSCACHE" />
+                <action android:name="com.bukeu.moment.action.MOMENT_SYNCFOLLOWS" />
+                <action android:name="com.bukeu.moment.action.MOMENT_LIKES" />
+                <action android:name="com.bukeu.moment.action.CHECK_APPVERSION" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+
+        <activity
+            android:name=".view.activity.FeedbackActivity"
+            android:label="@string/title_activity_feedback" >
+        </activity>
+        <activity
+            android:name=".view.activity.AboutActivity"
+            android:label="@string/title_activity_about" >
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app1="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/tools"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        app:theme="@style/AppTheme.base">
+
+        <com.bukeu.moment.view.widget.CircularImageView
+            android:id="@+id/iv_header_avater"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="0dp"
+            android:layout_margin="10dp"
+            android:src="@drawable/default_avater"
+            app1:civ_border="true"
+            app1:civ_borderWidth="1dp"
+            app1:civ_selector="true"
+            android:gravity="start" />
+
+        <TextView
+            android:id="@+id/tv_header_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="nickname"
+            android:textSize="@dimen/card_font_head"
+            android:textColor="@android:color/white" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <Spinner
+        android:id="@+id/header_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/spinnerHeight"
+        android:visibility="visible"
+        style="@style/Spinner" />
+
+</LinearLayout>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:minWidth="200dp"
+    android:padding="10dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <com.bukeu.moment.view.widget.CircularImageView
+            android:id="@+id/iv_card_avater"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/default_avater"
+            android:layout_gravity="center" />
+
+        <TextView
+            android:id="@+id/tv_card_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xBinary"
+            android:textSize="14sp"
+            android:textColor="#ff0057aa"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_card_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_gravity="center_horizontal"
+        android:text="Life in a day"
+        android:textColor="#ff000000"
+        android:textSize="14sp" />
+
+</LinearLayout>
+

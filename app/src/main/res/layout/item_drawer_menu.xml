@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_drawer_menu_item_root"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:padding="12dp"
+    android:background="@drawable/btn_context_menu"
+    android:clickable="true">
+
+    <ImageView
+        android:id="@+id/iv_drawer_menu_item_icon"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="56dp"
+        android:src="@drawable/ic_global_menu_direct"
+        android:layout_marginLeft="16dp" />
+
+    <TextView
+        android:id="@+id/tv_drawer_menu_item_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text="Home"
+        android:textStyle="bold"
+        android:paddingTop="4dp"
+        android:padding="4dp"
+        android:textColor="#666666"
+        android:textSize="16sp" />
+</LinearLayout>

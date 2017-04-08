@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.bukeu.moment.view.activity.FollowsActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_base_header" />
+
+    <FrameLayout
+        android:id="@+id/frame_follows"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+</LinearLayout>

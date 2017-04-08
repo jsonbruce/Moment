@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_drawer_menu_header"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="200dp"
+    android:padding="10dp"
+    android:background="@drawable/ic_person_bg2">
+
+    <com.bukeu.moment.view.widget.CircularImageView
+        android:id="@+id/iv_drawer_avater"
+        android:layout_width="@dimen/global_menu_avatar_size"
+        android:layout_height="@dimen/global_menu_avatar_size"
+        android:layout_gravity="center"
+        android:padding="5dp"
+        android:layout_margin="10dp"
+        android:src="@drawable/default_avater" />
+
+    <TextView
+        android:id="@+id/tv_drawer_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="10dp"
+        android:text="点击登录"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tv_drawer_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        android:text="添加个人描述"
+        android:textColor="@android:color/white"
+        android:textSize="14sp"
+        android:textStyle="normal" />
+
+</LinearLayout>

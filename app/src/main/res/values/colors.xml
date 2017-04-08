@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">@color/background_material_light</color>
+    <color name="primary_dark">@android:color/darker_gray</color>
+    <color name="primary_light">#C8E6C9</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+    <color name="primary_pressed">#388E3C</color>
+    <color name="ripple">#ff80ab</color>
+    <color name="accent">#FF5252</color>
+    <color name="accent_pressed">#f50057</color>
+
+    <color name="style_color_primary">#2d5d82</color>
+    <color name="style_color_primary_dark">#21425d</color>
+    <color name="style_color_accent">#01bcd5</color>
+
+    <color name="fab_color_normal">#db4437</color>
+    <color name="fab_color_pressed">#fff50006</color>
+    <color name="fab_color_shadow">#44000000</color>
+
+    <color name="avater_border">#ffffff</color>
+
+    <color name="btn_default_light_normal">#00000000</color>
+    <color name="btn_default_light_pressed">#40ffffff</color>
+    <color name="btn_send_normal">#02c754</color>
+    <color name="btn_send_pressed">#006633</color>
+    <color name="btn_default_shadow">#99000000</color>
+    <color name="btn_context_menu_normal">#ffffff</color>
+    <color name="btn_context_menu_pressed">#40000000</color>
+    <color name="btn_context_menu_text_red">#ffff0000</color>
+
+    <color name="text_like_counter">#ffffff</color>
+
+    <color name="bg_comments">#ffffff</color>
+
+
+    <!-- 消息流listview下拉刷新的header上的四个颜色值 -->
+    <color name="umeng_comm_lv_header_color1">#33b5e5</color>
+    <color name="umeng_comm_lv_header_color2">#ff4444</color>
+    <color name="umeng_comm_lv_header_color3">#99cc00</color>
+    <color name="umeng_comm_lv_header_color4">#ffbb33</color>
+
+</resources>

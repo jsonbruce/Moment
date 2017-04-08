@@ -1,0 +1,190 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical"
+    tools:context="com.bukeu.moment.view.activity.SigninActivity">
+
+    <RelativeLayout
+        android:id="@+id/layout_signin_headerbg"
+        android:layout_width="match_parent"
+        android:layout_height="256dp"
+        android:background="@drawable/ic_log_bg2">
+
+        <ImageView
+            android:id="@+id/iv_signin_logo"
+            android:src="@drawable/default_avater"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp" />
+        <ImageView
+            android:src="@drawable/ic_lifd"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_below="@id/iv_signin_logo"
+            android:layout_centerHorizontal="true" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/layout_signin_headerbg"
+        android:layout_marginTop="5dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/sym_action_email"
+                android:layout_gravity="center" />
+
+            <com.bukeu.moment.view.widget.ClearEditText
+                android:id="@+id/et_signin_email"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:drawableRight="@drawable/abc_ic_clear_mtrl_alpha"
+                android:hint="邮箱"
+                android:singleLine="true"
+                android:inputType="textEmailAddress" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_partial_secure"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp" />
+
+            <com.bukeu.moment.view.widget.ClearEditText
+                android:id="@+id/et_signin_password"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:hint="密码"
+                android:singleLine="true"
+                android:password="true"
+                android:inputType="textPassword"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_signin_repeatpassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@android:drawable/ic_partial_secure"
+                android:layout_gravity="center"
+                android:paddingLeft="5dp" />
+
+            <com.bukeu.moment.view.widget.ClearEditText
+                android:id="@+id/et_signin_password_repeat"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginRight="30dp"
+                android:gravity="center"
+                android:hint="确认密码"
+                android:singleLine="true"
+                android:password="true"
+                android:inputType="textPassword"
+                android:layout_marginLeft="10dp" />
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/btn_signin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/darker_gray"
+                android:text="@string/signin"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="30dp" />
+
+            <Button
+                style="?android:attr/borderlessButtonStyle"
+                android:id="@+id/btn_signup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/darker_gray"
+                android:text="@string/signup"
+                android:layout_marginLeft="20dp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="gone"
+        android:layout_marginBottom="15dp">
+
+        <ImageButton
+            android:id="@+id/btnFacebookLogin"
+            android:background="@drawable/sina"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="20dp"
+            android:text="Sign Up" />
+
+        <ImageButton
+            android:id="@+id/btnTwitterLogin"
+            android:background="@drawable/weixin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginLeft="10dp"
+            android:text="Sign Up" />
+
+    </LinearLayout>
+
+    <!-- Login Form Ends -->
+
+    <ProgressBar
+        android:id="@+id/prg_signin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/prg_loading_icon"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

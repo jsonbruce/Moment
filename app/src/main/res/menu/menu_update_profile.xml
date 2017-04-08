@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.bukeu.moment.view.activity.UpdateProfileActivity">
+    <item
+        android:id="@+id/action_sure"
+        android:icon="@drawable/ic_done_white_48dp"
+        android:title="@string/action_sure"
+        android:orderInCategory="100"
+        app:showAsAction="always" />
+</menu>

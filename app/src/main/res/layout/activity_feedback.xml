@@ -1,0 +1,45 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical"
+    tools:context=".FeedbackActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_base_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:layout_weight="1"
+        android:background="@color/background_material_light">
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_logo_text" />
+
+        <com.bukeu.moment.view.widget.ClearEditText
+            android:id="@+id/feedback_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="56dp"
+            android:layout_margin="8dp"
+            android:maxLength="255"
+            android:background="@color/background_material_light"
+            android:textSize="@dimen/abc_text_size_medium_material" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/send_button"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_gravity="right"
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_send" />
+
+</LinearLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="spinner_choices">
+        <item>Home</item>
+        <item>Group</item>
+        <item>My Following</item>
+        <item>Most Likes</item>
+        <item>Nearby</item>
+    </string-array>
+</resources>

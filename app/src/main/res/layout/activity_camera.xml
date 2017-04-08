@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@android:color/transparent" >
+
+    <FrameLayout
+        android:id="@+id/layout_camera_preview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </FrameLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_camera_menu"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/camera_barshade" >
+
+        <ImageButton
+            android:id="@+id/btn_camera_album"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/btn_capture_options"
+            android:src="@drawable/ic_collections_white_24dp" />
+
+        <Button
+            android:id="@+id/btn_camera_capture"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/selector_camera_capture" />
+
+        <ImageButton
+            android:id="@+id/btn_camera_confirm"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:background="@drawable/btn_default_light"
+            android:src="@drawable/ic_arrow_forward_white_24dp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

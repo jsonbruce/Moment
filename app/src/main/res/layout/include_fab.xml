@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/btn_fab"
+    android:layout_width="@dimen/btn_fab_size"
+    android:layout_height="@dimen/btn_fab_size"
+    android:layout_gravity="bottom|right"
+    android:layout_marginRight="@dimen/btn_fab_margins"
+    android:layout_marginBottom="@dimen/btn_fab_margins"
+    android:elevation="@dimen/default_elevation"
+    android:src="@drawable/ic_instagram_white"
+    android:background="@drawable/btn_fab_default"
+    android:contentDescription="@null"
+    android:textSize="28sp" />

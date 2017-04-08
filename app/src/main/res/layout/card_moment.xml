@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/card_padding"
+    android:layout_marginBottom="@dimen/card_padding"
+    android:layout_marginLeft="@dimen/card_screen_padding"
+    android:layout_marginRight="@dimen/card_screen_padding"
+    android:elevation="@dimen/default_elevation"
+    card_view:cardCornerRadius="1dp"
+    card_view:contentPadding="@dimen/padding_none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <com.bukeu.moment.view.widget.CircularImageView
+                    android:id="@+id/iv_card_avater"
+                    android:layout_width="@dimen/card_avater"
+                    android:layout_height="@dimen/card_avater"
+                    android:padding="5dp"
+                    android:layout_marginTop="2dp" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/tv_card_nickname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="xBinary"
+                        android:textSize="@dimen/card_font_head"
+                        android:textColor="@color/primary_material_dark" />
+
+                    <TextView
+                        android:id="@+id/tv_card_location"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@id/tv_card_nickname"
+                        android:text="Chengdu, Sichuan"
+                        android:textSize="@dimen/card_font_body"
+                        android:textColor="@color/primary_material_light" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="5dp"
+                android:padding="5dp">
+
+                <ImageButton
+                    android:id="@+id/btn_card_follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@android:drawable/ic_input_add"
+                    android:background="@android:color/transparent" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.bukeu.moment.view.widget.SquaredFrameLayout
+            android:id="@+id/vImageRoot"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.daimajia.swipe.SwipeLayout xmlns:swipe="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/swipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                swipe:leftEdgeSwipeOffset="0dp"
+                swipe:rightEdgeSwipeOffset="0dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#ff607d8b"
+                    android:gravity="center"
+                    android:tag="BottomText"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/tv_card_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginBottom="10dip"
+                        android:layout_marginRight="10dip"
+                        android:textSize="24sp"
+                        android:textColor="@android:color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:elevation="5dp">
+
+                    <ImageView
+                        android:id="@+id/iv_card_image"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true" />
+                </LinearLayout>
+
+            </com.daimajia.swipe.SwipeLayout>
+
+            <View
+                android:id="@+id/v_card_like_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_like_circle_background"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_card_like_fg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@drawable/ic_heart_outline_white"
+                android:visibility="gone" />
+
+        </com.bukeu.moment.view.widget.SquaredFrameLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="10dp">
+
+            <ImageButton
+                android:id="@+id/btn_card_like"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_heart_outline_grey"
+                android:visibility="visible"/>
+
+            <TextSwitcher
+                android:id="@+id/tsLikesCounter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:inAnimation="@anim/slide_in_likes_counter"
+                android:outAnimation="@anim/slide_out_likes_counter">
+
+                <TextView
+                    android:id="@+id/tv_card_likescount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ 0"
+                    android:textColor="@color/text_like_counter" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_like_counter" />
+            </TextSwitcher>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>

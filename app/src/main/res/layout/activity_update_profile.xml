@@ -1,0 +1,37 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bukeu.moment.view.activity.UpdateProfileActivity">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/include_base_header" />
+
+    <com.bukeu.moment.view.widget.CircularImageView
+        android:id="@+id/iv_user_avater"
+        android:layout_width="@dimen/user_profile_avatar_size"
+        android:layout_height="@dimen/user_profile_avatar_size"
+        android:layout_below="@id/toolbar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/default_avater"
+        app:civ_border="true"
+        app:civ_borderWidth="1dp"
+        app:civ_selector="true"/>
+
+    <EditText
+        android:id="@+id/et_user_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/iv_user_avater"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:singleLine="true"
+        android:hint="nickname"
+        android:textColor="@color/primary_material_dark"
+        android:textSize="20sp"/>
+
+</RelativeLayout>

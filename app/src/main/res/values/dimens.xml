@@ -1,0 +1,43 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!-- Define standard dimensions to comply with Holo-style grids and rhythm. -->
+
+    <dimen name="margin_tiny">4dp</dimen>
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">32dp</dimen>
+    <dimen name="margin_huge">64dp</dimen>
+
+    <dimen name="padding_none">0dp</dimen>
+
+    <!-- Semantic definitions -->
+
+    <dimen name="horizontal_page_margin">@dimen/margin_medium</dimen>
+    <dimen name="vertical_page_margin">@dimen/margin_medium</dimen>
+    
+    <!--Card View-->
+    <dimen name="card_font_body">12sp</dimen>
+    <dimen name="card_font_head">16sp</dimen>
+    <dimen name="card_font_flatbutton">14sp</dimen>
+    <dimen name="card_font_flatbutton_fontpadding">10sp</dimen>
+    <dimen name="card_padding">8dp</dimen>
+    <dimen name="card_screen_padding">8dp</dimen>
+    <dimen name="card_content_padding">16dp</dimen>
+    <dimen name="card_avater">34dp</dimen>
+    <dimen name="card_like">48dp</dimen>
+
+    <dimen name="btn_fab_size">56dp</dimen>
+    <dimen name="btn_fab_margins">16dp</dimen>
+    <dimen name="default_elevation">8dp</dimen>
+    <dimen name="comment_avatar_size">56dp</dimen>
+    <dimen name="user_profile_avatar_size">88dp</dimen>
+    <dimen name="global_menu_avatar_size">64dp</dimen>
+    <dimen name="publish_photo_thumbnail_size">176dp</dimen>
+
+    <dimen name="spinnerHeight">56dp</dimen>
+    <dimen name="spinner_font">16sp</dimen>
+    
+</resources>

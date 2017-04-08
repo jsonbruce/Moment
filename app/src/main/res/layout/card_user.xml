@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <com.bukeu.moment.view.widget.CircularImageView
+        android:id="@+id/iv_card_avater"
+        android:layout_width="@dimen/card_avater"
+        android:layout_height="@dimen/card_avater"
+        android:src="@drawable/default_avater"
+        android:padding="5dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="5dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/iv_card_avater"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp">
+
+        <TextView
+            android:id="@+id/tv_card_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="xBinary"
+            android:textSize="@dimen/card_font_head"
+            android:textColor="@color/primary_material_dark"
+            android:layout_marginTop="10dp" />
+
+    </LinearLayout>
+
+
+    <ImageButton
+        android:id="@+id/btn_card_follow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:src="@android:drawable/ic_input_add"
+        android:background="@android:color/transparent"
+        android:padding="5dp"
+        android:layout_marginRight="10dp" />
+
+</RelativeLayout>
